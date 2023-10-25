@@ -1,0 +1,24 @@
+<h1>Sign In </h1>
+
+<%= form_with url: sign_in_path do |form| %>
+
+
+    <div class="mb-3">
+  <%= form.label :email, class:"col-sm-2 col-form-label col-form-label-sm"%>
+  <%= form.text_field :email, class:"form-control", placeholder: "Exemplo: italo@gmail.com" %>
+    </div>
+
+    <div class="mb-3 ">
+  <%= form.label :password, class:"col-sm-2 col-form-label col-form-label-sm" %>
+  <%= form.password_field :password, class:"form-control", placeholder: "password"  %>
+  <%= link_to "Forgot Your Password?", password_reset_path %>
+  </div>
+
+
+
+
+    <div>
+  <%=form.submit "Sign In", class:"btn btn-primary"%>
+    </div>
+
+<% end %>
